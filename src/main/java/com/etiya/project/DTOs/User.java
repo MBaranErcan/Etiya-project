@@ -7,12 +7,7 @@ public class User {
 
     private Long userId;
 
-    // Foreign Key of Cust_Ord -> user_id
-//    private List<CustomerOrder> customerOrders;
-
     private String screenName;
-
-//    private String password;
 
     private String userName;
 
@@ -30,14 +25,6 @@ public class User {
         this.userId = userId;
     }
 
-//    public List<CustomerOrder> getCustomerOrders() {
-//        return customerOrders;
-//    }
-//
-//    public void setCustomerOrders(List<CustomerOrder> customerOrders) {
-//        this.customerOrders = customerOrders;
-//    }
-
     public String getScreenName() {
         return screenName;
     }
@@ -45,14 +32,6 @@ public class User {
     public void setScreenName(String screenName) {
         this.screenName = screenName;
     }
-
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
 
     public String getUserName() {
         return userName;

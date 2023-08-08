@@ -6,9 +6,6 @@ public class CustomerOrder {
 
     private Long customerOrderId;
 
-    // Foreign Key for Cust_Ord_Char_Val -> cust_ord_id;
-    private CustOrdCharValEntity custOrdCharValEntity;
-
     private ProductOffer productOffer;
 
     private User user;
@@ -23,14 +20,6 @@ public class CustomerOrder {
 
     public void setCustomerOrderId(Long customerOrderId) {
         this.customerOrderId = customerOrderId;
-    }
-
-    public CustOrdCharValEntity getCustOrdCharValEntity() {
-        return custOrdCharValEntity;
-    }
-
-    public void setCustOrdCharValEntity(CustOrdCharValEntity custOrdCharValEntity) {
-        this.custOrdCharValEntity = custOrdCharValEntity;
     }
 
     public ProductOffer getProductOffer() {

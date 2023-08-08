@@ -1,16 +1,8 @@
 package com.etiya.project.DTOs;
 
-import java.util.List;
-
 public class ProductOffer {
 
     private Long productOfferId;
-
-    // Foreign Key: Cust_Ord -> prod_ofr_id
-    private List<CustomerOrder> customerOrders;
-
-    // Foreign Key of Prod_Ofr_Char_Val -> prod_ofr_id
-    private List<ProductOfferCharacteristicValue> productOfferCharacteristicValue;
 
     private String name;
 
@@ -27,22 +19,6 @@ public class ProductOffer {
 
     public void setProductOfferId(Long productOfferId) {
         this.productOfferId = productOfferId;
-    }
-
-    public List<CustomerOrder> getCustomerOrders() {
-        return customerOrders;
-    }
-
-    public void setCustomerOrders(List<CustomerOrder> customerOrders) {
-        this.customerOrders = customerOrders;
-    }
-
-    public List<ProductOfferCharacteristicValue> getProductOfferCharacteristicValue() {
-        return productOfferCharacteristicValue;
-    }
-
-    public void setProductOfferCharacteristicValue(List<ProductOfferCharacteristicValue> productOfferCharacteristicValue) {
-        this.productOfferCharacteristicValue = productOfferCharacteristicValue;
     }
 
     public String getName() {

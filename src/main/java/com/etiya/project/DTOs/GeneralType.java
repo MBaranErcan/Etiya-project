@@ -8,12 +8,6 @@ public class GeneralType {
 
     private Long generalTypeId;
 
-/*    // Foreign Key: User -> user_tp_id
-    private List<User> users;
-
-    // Foreign Key: ProdOfrEntity -> tpId
-    private List<ProductOffer> productOffers;*/
-
     private String name;
 
     private String description;
@@ -35,24 +29,6 @@ public class GeneralType {
     public void setGeneralTypeId(Long generalTypeId) {
         this.generalTypeId = generalTypeId;
     }
-
-/*
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
-
-    public List<ProductOffer> getProductOffers() {
-        return productOffers;
-    }
-
-    public void setProductOffers(List<ProductOffer> productOffers) {
-        this.productOffers = productOffers;
-    }
-*/
 
     public String getName() {
         return name;
