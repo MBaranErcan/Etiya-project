@@ -2,8 +2,6 @@ package com.etiya.project.entities;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "prod_ofr")
 public class ProdOfrEntity extends BaseEntity{
@@ -11,15 +9,6 @@ public class ProdOfrEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long prodOfrId;
-
-    // Foreign Key: Cust_Ord -> prod_ofr_id
-    @OneToMany(mappedBy = "prodOfrEntity", cascade = CascadeType.ALL)
-    private List<CustOrdEntity> custOrdEntityList;
-
-    // Foreign Key of Prod_Ofr_Char_Val -> prod_ofr_id
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "prod_ofr_id")
-    private List<ProdOfrCharValEntity> prodOfrCharValEntity;
 
     @Column(name = "name")
     private String name;
@@ -44,22 +33,6 @@ public class ProdOfrEntity extends BaseEntity{
 
     public void setProdOfrId(Long prodOfrId) {
         this.prodOfrId = prodOfrId;
-    }
-
-    public List<CustOrdEntity> getCustOrdEntityList() {
-        return custOrdEntityList;
-    }
-
-    public void setCustOrdEntityList(List<CustOrdEntity> custOrdEntityList) {
-        this.custOrdEntityList = custOrdEntityList;
-    }
-
-    public List<ProdOfrCharValEntity> getProdOfrCharValEntity() {
-        return prodOfrCharValEntity;
-    }
-
-    public void setProdOfrCharValEntity(List<ProdOfrCharValEntity> prodOfrCharValEntity) {
-        this.prodOfrCharValEntity = prodOfrCharValEntity;
     }
 
     public String getName() {

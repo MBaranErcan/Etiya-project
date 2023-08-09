@@ -14,14 +14,10 @@ public class UserEntity extends BaseEntity {
     @Column(name = "user_id")
     private Long userId;
 
-    // Foreign Key of Cust_Ord -> user_id
-    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
-    private List<CustOrdEntity> custOrdEntityList;
-
     @Column(name = "scr_name")
     private String scrName;
 
-    @Column(name = "pwd")
+    @Column(name = "pwd", nullable = false)
     @Size(min = 5, message = "Min password length is 5 characters!")
     private String pwd;
 
@@ -46,14 +42,6 @@ public class UserEntity extends BaseEntity {
 
     public void setUserId(Long userId) {
         this.userId = userId;
-    }
-
-    public List<CustOrdEntity> getCustOrdEntityList() {
-        return custOrdEntityList;
-    }
-
-    public void setCustOrdEntityList(List<CustOrdEntity> custOrdEntityList) {
-        this.custOrdEntityList = custOrdEntityList;
     }
 
     public String getScrName() {
