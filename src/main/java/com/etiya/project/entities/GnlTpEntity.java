@@ -13,15 +13,6 @@ public class GnlTpEntity extends BaseEntity{
     @Column(name = "gnl_tp_id")
     private Long gnlTpId;
 
-
-    // Foreign Key: User -> user_tp_id
-    @OneToMany(mappedBy = "gnlTpEntity", cascade = CascadeType.ALL)
-    private List<UserEntity> userEntity;
-
-    // Foreign Key: ProdOfrEntity -> tpId
-    @OneToMany(mappedBy = "tpId", cascade = CascadeType.ALL)
-    private List<ProdOfrEntity> prodOfrEntities;
-
     @Column(name = "name", nullable = false)
     private String name;
 
@@ -44,22 +35,6 @@ public class GnlTpEntity extends BaseEntity{
 
     public void setGnlTpId(Long gnlTpId) {
         this.gnlTpId = gnlTpId;
-    }
-
-    public List<UserEntity> getUserEntity() {
-        return userEntity;
-    }
-
-    public void setUserEntity(List<UserEntity> userEntity) {
-        this.userEntity = userEntity;
-    }
-
-    public List<ProdOfrEntity> getProdOfrEntities() {
-        return prodOfrEntities;
-    }
-
-    public void setProdOfrEntities(List<ProdOfrEntity> prodOfrEntities) {
-        this.prodOfrEntities = prodOfrEntities;
     }
 
     public String getName() {
