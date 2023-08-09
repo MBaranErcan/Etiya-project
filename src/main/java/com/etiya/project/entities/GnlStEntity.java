@@ -21,27 +21,6 @@ public class GnlStEntity extends BaseEntity{
     @Column(name = "gnl_st_id")
     private Long gnlStId;
 
-    @OneToMany(mappedBy = "gnlStEntity", cascade = CascadeType.ALL)
-    private List<UserEntity> userEntityList;
-
-    @OneToMany(mappedBy = "gnlStEntity", cascade = CascadeType.ALL)
-    private List<CustOrdEntity> custOrdEntity;
-
-    @OneToMany(mappedBy = "gnlStEntity", cascade = CascadeType.ALL)
-    private List<CustOrdCharValEntity> custOrdCharValEntity;
-
-    @OneToMany(mappedBy = "stId", cascade = CascadeType.ALL)
-    private List<ProdOfrEntity> prodOfrEntities;
-
-    @OneToMany(mappedBy = "stId", cascade = CascadeType.ALL)
-    private List<GnlCharEntity> gnlCharEntities;
-
-    @OneToMany(mappedBy = "stId", cascade = CascadeType.ALL)
-    private List<GnlCharValEntity> gnlCharValEntities;
-
-    @OneToMany(mappedBy = "stId", cascade = CascadeType.ALL)
-    private List<ProdOfrCharValEntity> prodOfrCharValEntities;
-
     @Column(name = "name", nullable = false)
     private String name;
 
@@ -59,69 +38,12 @@ public class GnlStEntity extends BaseEntity{
 
 
     // GETTERS & SETTERS
-
     public Long getGnlStId() {
         return gnlStId;
     }
 
     public void setGnlStId(Long gnlStId) {
         this.gnlStId = gnlStId;
-    }
-
-    public List<UserEntity> getUserEntityList() {
-        return userEntityList;
-    }
-
-    public void setUserEntityList(List<UserEntity> userEntityList) {
-        this.userEntityList = userEntityList;
-    }
-
-    public List<CustOrdEntity> getCustOrdEntity() {
-        return custOrdEntity;
-    }
-
-    public void setCustOrdEntity(List<CustOrdEntity> custOrdEntity) {
-        this.custOrdEntity = custOrdEntity;
-    }
-
-    public List<CustOrdCharValEntity> getCustOrdCharValEntity() {
-        return custOrdCharValEntity;
-    }
-
-    public void setCustOrdCharValEntity(List<CustOrdCharValEntity> custOrdCharValEntity) {
-        this.custOrdCharValEntity = custOrdCharValEntity;
-    }
-
-    public List<ProdOfrEntity> getProdOfrEntities() {
-        return prodOfrEntities;
-    }
-
-    public void setProdOfrEntities(List<ProdOfrEntity> prodOfrEntities) {
-        this.prodOfrEntities = prodOfrEntities;
-    }
-
-    public List<GnlCharEntity> getGnlCharEntities() {
-        return gnlCharEntities;
-    }
-
-    public void setGnlCharEntities(List<GnlCharEntity> gnlCharEntities) {
-        this.gnlCharEntities = gnlCharEntities;
-    }
-
-    public List<GnlCharValEntity> getGnlCharValEntities() {
-        return gnlCharValEntities;
-    }
-
-    public void setGnlCharValEntities(List<GnlCharValEntity> gnlCharValEntities) {
-        this.gnlCharValEntities = gnlCharValEntities;
-    }
-
-    public List<ProdOfrCharValEntity> getProdOfrCharValEntities() {
-        return prodOfrCharValEntities;
-    }
-
-    public void setProdOfrCharValEntities(List<ProdOfrCharValEntity> prodOfrCharValEntities) {
-        this.prodOfrCharValEntities = prodOfrCharValEntities;
     }
 
     public String getName() {

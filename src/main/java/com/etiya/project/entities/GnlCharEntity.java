@@ -13,13 +13,13 @@ public class GnlCharEntity extends BaseEntity {
     @Column(name = "gnl_char_id")
     private Long gnlCharId;
 
-    // FK: GnlChrValEntity -> char_id
+/*    // FK: GnlChrValEntity -> char_id
     @OneToMany(mappedBy = "charId", cascade = CascadeType.ALL)
     private List<GnlCharValEntity> gnlCharValEntity;
 
     //FK: ProdOfrCharValEntity -> gnlCharEntity
     @OneToMany(mappedBy = "gnlCharEntity", cascade = CascadeType.ALL)
-    private List<ProdOfrCharValEntity> prodOfrCharValEntities;
+    private List<ProdOfrCharValEntity> prodOfrCharValEntities;*/
 
     @Column(name = "descr")
     private String descr;
@@ -44,7 +44,7 @@ public class GnlCharEntity extends BaseEntity {
         this.gnlCharId = gnlCharId;
     }
 
-    public List<GnlCharValEntity> getGnlCharValEntity() {
+/*    public List<GnlCharValEntity> getGnlCharValEntity() {
         return gnlCharValEntity;
     }
 
@@ -58,7 +58,7 @@ public class GnlCharEntity extends BaseEntity {
 
     public void setProdOfrCharValEntities(List<ProdOfrCharValEntity> prodOfrCharValEntities) {
         this.prodOfrCharValEntities = prodOfrCharValEntities;
-    }
+    }*/
 
     public String getDescr() {
         return descr;
