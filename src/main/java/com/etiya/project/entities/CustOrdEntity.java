@@ -2,8 +2,6 @@ package com.etiya.project.entities;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "cust_ord")
 public class CustOrdEntity extends BaseEntity{
@@ -12,11 +10,6 @@ public class CustOrdEntity extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cust_ord_id")
     private Long custOrdId;
-
-    // Foreign Key for Cust_Ord_Char_Val -> cust_ord_id;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cust_ord_id")
-    private CustOrdCharValEntity custOrdCharValEntity;
 
     //Foreign Key for Prod_Ofr -> prod_ofr_id
     @ManyToOne(cascade = CascadeType.ALL)
@@ -41,14 +34,6 @@ public class CustOrdEntity extends BaseEntity{
 
     public void setCustOrdId(Long custOrdId) {
         this.custOrdId = custOrdId;
-    }
-
-    public CustOrdCharValEntity getCustOrdCharValEntity() {
-        return custOrdCharValEntity;
-    }
-
-    public void setCustOrdCharValEntity(CustOrdCharValEntity custOrdCharValEntity) {
-        this.custOrdCharValEntity = custOrdCharValEntity;
     }
 
     public ProdOfrEntity getProdOfrEntity() {

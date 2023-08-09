@@ -20,7 +20,7 @@ public class CustOrdCharValEntity extends BaseEntity{
     private GnlStEntity gnlStEntity;
 
     // Foreign Key: Cust_Ord -> cust_ord_id
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cust_ord_id")
     private CustOrdEntity custOrdId;
 
