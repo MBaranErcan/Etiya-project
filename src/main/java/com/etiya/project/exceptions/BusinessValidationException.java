@@ -9,7 +9,7 @@ public class BusinessValidationException extends RuntimeException{
     private String details;
 
     public BusinessValidationException(String message, String details) {
-        super(message);
+        this.message = message;
         this.details = details;
     }
 
