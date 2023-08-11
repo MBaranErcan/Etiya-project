@@ -15,7 +15,6 @@ public interface CustomerOrderMapper {
 
     @Mappings({
             @Mapping(source = "custOrdId", target = "customerOrderId"),
-            @Mapping(source = "custOrdCharValEntity", target = "custOrdCharValEntity"),
             @Mapping(source = "prodOfrEntity", target = "productOffer"),
             @Mapping(source = "userId", target = "user"),
             @Mapping(source = "gnlStEntity", target = "generalStatus")

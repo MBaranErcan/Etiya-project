@@ -17,8 +17,6 @@ public interface ProductOfferMapper {
 
     @Mappings({
             @Mapping(source = "prodOfrId", target = "productOfferId"),
-            @Mapping(source = "custOrdEntityList", target = "customerOrders"),
-            @Mapping(source = "prodOfrCharValEntity", target = "productOfferCharacteristicValue"),
             @Mapping(source = "name", target = "name"),
             @Mapping(source = "descr", target = "description"),
             @Mapping(source = "stId", target = "stId"),

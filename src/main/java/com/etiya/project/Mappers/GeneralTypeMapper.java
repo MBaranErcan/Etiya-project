@@ -1,7 +1,6 @@
 package com.etiya.project.Mappers;
 
 import com.etiya.project.DTOs.GeneralType;
-import com.etiya.project.DTOs.ProductOffer;
 import com.etiya.project.entities.GnlTpEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -16,8 +15,6 @@ public interface GeneralTypeMapper {
 
     @Mappings({
             @Mapping(source = "gnlTpId", target = "generalTypeId"),
-            //@Mapping(source = "userEntity", target = "users"),
-            //@Mapping(source = "prodOfrEntities", target = "productOffers"),
             @Mapping(source = "name", target = "name"),
             @Mapping(source = "descr", target = "description"),
             @Mapping(source = "shrtCode", target = "shortCode"),

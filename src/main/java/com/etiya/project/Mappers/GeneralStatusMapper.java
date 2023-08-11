@@ -15,10 +15,6 @@ public interface GeneralStatusMapper {
 
     @Mappings({
             @Mapping(source = "gnlStId", target = "generalStatusId"),
-            //@Mapping(source = "userEntityList", target = "users"),
-            //@Mapping(source = "custOrdEntity", target = "customerOrders"),
-            //@Mapping(source = "custOrdCharValEntity", target = "customerOrderCharacteristicValues"),
-            //@Mapping(source = "prodOfrEntities", target = "productOffers"),
             @Mapping(source = "name", target = "name"),
             @Mapping(source = "descr", target = "description"),
             @Mapping(source = "entCodeName", target = "entityCodeName"),

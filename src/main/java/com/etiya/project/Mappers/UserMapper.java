@@ -15,9 +15,7 @@ public interface UserMapper {
 
     @Mappings({
             @Mapping(source = "userId", target = "userId"),
-            //@Mapping(source = "custOrdEntityList", target = "customerOrders"),
             @Mapping(source = "scrName", target = "screenName"),
-            //@Mapping(source = "pwd", target = "password"),
             @Mapping(source = "uName", target = "userName"),
             @Mapping(source = "gnlStEntity", target = "generalStatus"),
             @Mapping(source = "gnlTpEntity", target = "generalType")
