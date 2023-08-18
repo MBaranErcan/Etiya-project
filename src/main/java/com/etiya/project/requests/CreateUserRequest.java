@@ -1,11 +1,22 @@
 package com.etiya.project.requests;
 
+import jakarta.validation.constraints.*;
+
 public class CreateUserRequest {
 
     private String scrName;
+
+    @Size(min = 5)
+    @NotBlank
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$)$?")  // does not work :(
     private String pwd;
+
+    @Size(min = 2)
+    @NotBlank
     private String uName;
+
     private String userType;
+
     private String userStatus;
 
 

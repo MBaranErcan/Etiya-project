@@ -2,6 +2,7 @@ package com.etiya.project.requests;
 
 public class InquireUserRequest {
 
+
     private String uName;
     private String pwd;
 
