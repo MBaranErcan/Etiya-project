@@ -15,31 +15,37 @@ public class GenericResponse<T> {
         this.returnCode = returnCode;
     }
 
-    public GenericResponse(String message, int returnCode) {
+    public static <T> GenericResponse<T> successResponse(T t) {
+        return new GenericResponse<>(t,"Success!", GeneralEnumerations.ReturnCode.SUCCESS.getReturnCode());
+    }
+    public static <T> GenericResponse<T> failedResponse(T t) {
+        return new GenericResponse<>(t,"Error!", GeneralEnumerations.ReturnCode.ERROR.getReturnCode());
+    }
+    public static <T> GenericResponse<T> failedResponse(T t, String message) {
+        return new GenericResponse<>(t, message, GeneralEnumerations.ReturnCode.ERROR.getReturnCode());
+    }
+
+    public T getT() {
+        return t;
+    }
+
+    public void setT(T t) {
+        this.t = t;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getReturnCode() {
+        return returnCode;
+    }
+
+    public void setReturnCode(int returnCode) {
         this.returnCode = returnCode;
     }
-
-    // CREATE (POST) Responses
-    public static GenericResponse<?> createSuccessResponse() {
-        return new GenericResponse<>("Success!", GeneralEnumerations.ReturnCode.SUCCESS.getReturnCode());
-    }
-    public static GenericResponse<?> createFailedResponse() {
-        return new GenericResponse<>("Error!", GeneralEnumerations.ReturnCode.ERROR.getReturnCode());
-    }
-    public static GenericResponse<?> createFailedResponse(String message) {
-        return new GenericResponse<>(message, GeneralEnumerations.ReturnCode.ERROR.getReturnCode());
-    }
-
-    // Inquire User (Get) Responses
-    public static GenericResponse<?> inquireSuccessResponse(User user) {
-        return new GenericResponse<>(user, "Success!", GeneralEnumerations.ReturnCode.SUCCESS.getReturnCode());
-    }
-    public static GenericResponse<?> inquireFailedResponse() {
-        return new GenericResponse<>("Error!", GeneralEnumerations.ReturnCode.ERROR.getReturnCode());
-    }
-    public static GenericResponse<?> inquireFailedResponse(String message) {
-        return new GenericResponse<>(message, GeneralEnumerations.ReturnCode.ERROR.getReturnCode());
-    }
-
 }
